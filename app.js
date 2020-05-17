@@ -3,7 +3,7 @@
 const loadTutorial = (openingName) => {
   let openingTextNode = document.createElement("p");
   openingTextNode.textContent = openingName;
-  document.getElementById("list").appendChild(openingTextNode);
+  document.getElementById("chessBoard-container").appendChild(openingTextNode);
 };
 
 //-----------------------
