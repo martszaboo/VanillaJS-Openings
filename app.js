@@ -1,9 +1,13 @@
+//Global változók
+
+let shown = false;
+
+//-----------------------
+
 //Tutorial betöltése
 
 const loadTutorial = (openingName) => {
-  let openingTextNode = document.createElement("p");
-  openingTextNode.textContent = openingName;
-  document.getElementById("chessBoard-container").appendChild(openingTextNode);
+  console.log(openingName);
 };
 
 //-----------------------
@@ -19,8 +23,10 @@ const showDetail = (children) => {
   }
   if (detail.classList.contains("show")) {
     detail.classList.remove("show");
+    shown = false;
   } else {
     detail.classList.add("show");
+    shown = true;
   }
 };
 //-------------------------------//
@@ -36,7 +42,9 @@ for (let i = 0; i < openings.length; i++) {
     //--------------------------//
 
     //Betölti a tutorialt//
-    loadTutorial(e.target.textContent);
+    if (shown) {
+      loadTutorial(e.target.textContent);
+    }
 
     // console.log(e.target.textContent);
   });
