@@ -1,7 +1,10 @@
 //Global változók
 
 let shown = false;
-
+let config = {
+  position: "start",
+};
+let board = Chessboard("chessboard", config);
 //-----------------------
 
 //Tutorial betöltése
