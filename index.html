@@ -6,8 +6,12 @@
     <title>Megnyitások</title>
     <script src="./jQuery.js"></script>
     <script src="./chessboardjs/js/chessboard-1.0.0.js"></script>
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-5.12.1-web/css/all.min.css"
+    />
     <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet" href="./chessboardjs/css/chessboard-1.0.0.css">
+    <link rel="stylesheet" href="./chessboardjs/css/chessboard-1.0.0.css" />
   </head>
   <body>
     <div class="navbar">
@@ -35,10 +39,27 @@
       </ul>
     </div>
     <div class="main" id="main">
-      <div style="display: flex; justify-content: center;">
-        <div id="chessboard" style="width: 400px"></div>
-
+      <div class="chessBoard-container">
+        <div id="chessBoard" style="width: 400px;"></div>
+        <div class="chessBoard-detailbox">
+          <span>Details</span>
+        </div>
       </div>
+      <div class="chessBoard-arrowContainer">
+        <a href="#"
+          ><i
+            id="prev"
+            style="font-size: 5rem;"
+            class="arrow fas fa-arrow-left"
+          ></i
+        ></a>
+        <a href="#"
+          ><i
+            id="next"
+            style="font-size: 5rem;"
+            class="arrow fas fa-arrow-right"
+          ></i
+        ></a>
       </div>
     </div>
   </body>

@@ -2,9 +2,10 @@
 
 let shown = false;
 let config = {
+  draggable: true,
   position: "start",
 };
-let board = Chessboard("chessboard", config);
+let board = Chessboard("chessBoard", config);
 //-----------------------
 
 //Tutorial betöltése
@@ -14,7 +15,19 @@ const loadTutorial = (openingName) => {
 };
 
 //-----------------------
+//Következő és előző step
 
+document.querySelector("#next").addEventListener("click", () => {
+  board.move("e4-d5");
+  console.log("next");
+});
+
+document.querySelector("#prev").addEventListener("click", () => {
+  console.log("prev");
+  board.move("d5-e5");
+});
+
+//------------------------------
 //Detail mutatása-eltüntetése
 
 const showDetail = (children) => {
@@ -52,5 +65,11 @@ for (let i = 0; i < openings.length; i++) {
     // console.log(e.target.textContent);
   });
 }
+
+//----------------------------------------//
+//Léptetés test
+setTimeout(() => {
+  board.move("e2-e4");
+}, 1000);
 
 //----------------------------------------//

@@ -6,7 +6,10 @@
   color: cadetblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-a {
+/* .arrow {
+  border: solid 3px greenyellow;
+} */
+.a {
   display: block;
   text-decoration: none;
   width: 100%;
@@ -58,34 +61,24 @@ body {
 /* ----------------- */
 /* ChessBoard styles */
 /* ----------------- */
-
-.chessBoard-container{
+.chessBoard-container {
   border: solid 2px pink;
-  height: 100%;
+  height: 80vh;
   display: flex;
   text-align: center;
   justify-content: center;
 }
-.chessBoard{
-  border-spacing: 0;
-  border: solid blue 1px ;
-  padding: 0;
-  margin: 0;
-  
+.chessBoard {
+  width: 400px;
+}
 
+.chessBoard-detailbox {
+  border: 1px solid blue;
+  /* width: 100%; */
 }
-.chessBoard th{
-  border: 1px black solid;
-}
-.chessBoard td{
-  height: 10vh;
-  width: 10vh;
- 
-
-}
-.light{
-  background-color: lightblue;
-}
-.dark{
-  background-color: darkgreen;
+.chessBoard-arrowContainer {
+  display: flex;
+  border: palegreen solid 2px;
+  justify-content: center;
+  height: 20%;
 }
