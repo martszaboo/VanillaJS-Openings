@@ -66,19 +66,23 @@ body {
   height: 80vh;
   display: flex;
   text-align: center;
-  justify-content: center;
+  justify-content: left;
 }
 .chessBoard {
-  width: 400px;
+  width: 40vw;
+  padding-left: 3rem;
 }
 
 .chessBoard-detailbox {
   border: 1px solid blue;
-  /* width: 100%; */
+  width: 100%;
 }
 .chessBoard-arrowContainer {
   display: flex;
   border: palegreen solid 2px;
   justify-content: center;
   height: 20%;
+}
+.detail-each {
+  border: dotted green 1px;
 }
